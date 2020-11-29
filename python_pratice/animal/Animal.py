@@ -34,29 +34,38 @@ class Cat(Animal):
 
     def Catch(self):
         print(f"我会抓老鼠")
+
     def call(self):
         print("我会喵喵叫")
         # 编写一个方法，输出全部结果
+
     def get_cat(self):
         print(f"我叫{self.name},颜色是{self.color},年龄是{self.age}，性别是{self.gender},{self.hair}")
         self.Catch()
+
+
 class Dog(Animal):
-    hair: str=""
-    def __init__(self,hair, name, color, age, gender):
-        self.hair=hair
-        super().__init__( name, color, age, gender)
+    hair: str = ""
+
+    def __init__(self, hair, name, color, age, gender):
+        self.hair = hair
+        super().__init__(name, color, age, gender)
+
     def home(self):
         print("我会看家")
+
     def call(self):
         print("我会汪汪叫")
+
     def get_dog(self):
         print(f"我叫{self.name},颜色是{self.color},年龄是{self.age}，性别是{self.gender},{self.hair}")
 
+
 if __name__ == '__main__':
-    ncat=Cat("短毛","球球","白色",2,"男")
+    ncat = Cat("短毛", "球球", "白色", 2, "男")
     # print(ncat.hair)
     ncat.Catch()
     ncat.get_cat()
-    ndog=Dog("长毛","花花","黑色",3,"女")
+    ndog = Dog("长毛", "花花", "黑色", 3, "女")
     ndog.home()
     ndog.get_dog()
