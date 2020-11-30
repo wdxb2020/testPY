@@ -69,7 +69,7 @@ if __name__ == '__main__':
     ndog = Dog("长毛", "花花", "黑色", 3, "母")
     ndog.home()
     ndog.get_dog()
-
+# yaml方法
 with open("Animal.yml", encoding="utf-8") as f:
     datas=yaml.safe_load(f)
     print(datas)
