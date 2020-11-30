@@ -2,8 +2,8 @@
 创建子类【猫】，继承【动物类】，
 复写父类的__init__方法，继承父类的属性，
 '''
-
-
+import yaml
+# 定义一个动物类，属性，方法
 class Animal():
     name: str = ""
     color: str = ""
@@ -23,7 +23,7 @@ class Animal():
     def run(self):
         print("我会跑")
 
-
+# 定义一个子类
 class Cat(Animal):
     hair: str = ""
 
@@ -37,8 +37,8 @@ class Cat(Animal):
 
     def call(self):
         print("我会喵喵叫")
-        # 编写一个方法，输出全部结果
 
+        # 编写一个方法，输出全部结果
     def get_cat(self):
         print(f"我叫{self.name},颜色是{self.color},年龄是{self.age}，性别是{self.gender},{self.hair}")
         self.Catch()
@@ -60,12 +60,16 @@ class Dog(Animal):
     def get_dog(self):
         print(f"我叫{self.name},颜色是{self.color},年龄是{self.age}，性别是{self.gender},{self.hair}")
 
-
+# 调用方法，运行结果
 if __name__ == '__main__':
-    ncat = Cat("短毛", "球球", "白色", 2, "男")
+    ncat = Cat("短毛", "球球", "白色", 2, "公")
     # print(ncat.hair)
     ncat.Catch()
     ncat.get_cat()
-    ndog = Dog("长毛", "花花", "黑色", 3, "女")
+    ndog = Dog("长毛", "花花", "黑色", 3, "母")
     ndog.home()
     ndog.get_dog()
+
+with open("Animal.yml", encoding="utf-8") as f:
+    datas=yaml.safe_load(f)
+    print(datas)

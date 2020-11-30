@@ -1,0 +1,14 @@
+cat:
+  hair: 短发
+  name: 球球
+  color: 白色
+  age: 2
+  gender: 公
+
+dog:
+  hair: 长发
+  name: 花花
+  color: 黑色
+  age: 3
+  gender: 母
+
