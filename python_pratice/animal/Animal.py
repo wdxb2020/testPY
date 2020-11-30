@@ -69,7 +69,24 @@ if __name__ == '__main__':
     ndog = Dog("长毛", "花花", "黑色", 3, "母")
     ndog.home()
     ndog.get_dog()
+    print("----------------------------------------------------------------------")
 # yaml方法
 with open("Animal.yml", encoding="utf-8") as f:
-    datas=yaml.safe_load(f)
-    print(datas)
+    datas=yaml.safe_load(f)  ##从yaml读取文件
+    hair = datas['cat']['hair']
+    name = datas['cat']['name']
+    color = datas['cat']['color']
+    age = datas['cat']['age']
+    gender = datas['cat']['gender']
+    ncat = Cat(hair, name, color, age, gender)
+    ncat.Catch()
+    ncat.get_cat()
+
+    hair = datas['dog']['hair']
+    name = datas['dog']['name']
+    color = datas['dog']['color']
+    age = datas['dog']['age']
+    gender = datas['dog']['gender']
+    ndog = Dog(hair, name, color, age, gender)
+    ndog.home()
+    ndog.get_dog()
