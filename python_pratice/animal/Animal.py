@@ -43,7 +43,7 @@ class Cat(Animal):
         print(f"我叫{self.name},颜色是{self.color},年龄是{self.age}，性别是{self.gender},{self.hair}")
         self.Catch()
 
-
+    ## 定义一个狗子类
 class Dog(Animal):
     hair: str = ""
 
@@ -70,6 +70,7 @@ if __name__ == '__main__':
     ndog.home()
     ndog.get_dog()
     print("----------------------------------------------------------------------")
+
 # yaml方法
 with open("Animal.yml", encoding="utf-8") as f:
     datas=yaml.safe_load(f)  ##从yaml读取文件
@@ -81,7 +82,7 @@ with open("Animal.yml", encoding="utf-8") as f:
     ncat = Cat(hair, name, color, age, gender)
     ncat.Catch()
     ncat.get_cat()
-
+    # 定义狗属性 从yml文件中获取值
     hair = datas['dog']['hair']
     name = datas['dog']['name']
     color = datas['dog']['color']
